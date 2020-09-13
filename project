@@ -1,0 +1,58 @@
+import random
+board=[0,1,2,
+       3,4,5,
+       6,7,8]
+       def tictactoe_draw():
+    print(board[0],board[1],board[2])
+    print(board[3],board[4],board[5])
+    print(board[6],board[7],board[8])
+    print()
+    tictactoe_draw()
+    def player_1():
+    print("player_1 enter your desired board location")
+    location=int(input())
+    if board [location]!='O' and board [location]!='X' :
+        board [location]='X'
+    else:
+        print("the plsce is taken , select an other place")
+        tictactoe_draw()
+        player_1()
+tictactoe_draw()
+def player_2():
+    print("player_2 enter your desired board location")
+    location=int(input())
+    if board [location]!='O' and board [location]!='X' :
+        board [location]='O'
+    else:
+        print("the plsce is taken , select an other place")
+tictactoe_draw()
+player_2()
+tictactoe_draw()
+def win(O_or_X):
+    if board[0] == O_or_X and board[1] == O_or_X and board[2] == O_or_X :
+        return True
+    if board[3] == O_or_X and board[4] == O_or_X and board[5] == O_or_X :
+        return True
+    if board[6] == O_or_X and board[7] == O_or_X and board[8] == O_or_X :
+        return True
+    if board[0] == O_or_X and board[3] == O_or_X and board[6] == O_or_X :
+        return True
+    if board[1] == O_or_X and board[4] == O_or_X and board[7] == O_or_X :
+        return True
+    if board[2] == O_or_X and board[5] == O_or_X and board[8] == O_or_X :
+        return True
+    if board[0] == O_or_X and board[4] == O_or_X and board[8] == O_or_X :
+        return True  
+    if board[6] == O_or_X and board[4] == O_or_X and board[2] == O_or_X :
+        return True
+while True:
+    player_1()
+    tictactoe_draw()
+    if win('x')==True:
+        print("player_1 win")
+        break;
+    player_2()
+    tictactoe_draw()
+    if win('O')==True:
+        print("player_2 win")
+        break;
