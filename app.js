@@ -6,7 +6,7 @@ var app = express();
 app.use(bodyparser.urlencoded({extended:true}));
 
 var up = "https://api.openweathermap.org/data/2.5/weather?q="
-var low = "&appid=c5c9021ab88eb53dd028c7f87c6dd03e"
+var low = "&appid=Enter the appid"
 
 app.get('/',(req,res)=>{
   res.sendFile(__dirname+"/index.html");
