@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "express": "^4.18.1",
+    "express": "^5.2.1",
     "nodemon": "^2.0.19",
     "weather-js": "^2.0.0"
   }
